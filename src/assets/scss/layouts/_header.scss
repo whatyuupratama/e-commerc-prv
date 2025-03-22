@@ -1,0 +1,55 @@
+.section {
+    width: 100%;
+    background-color: $color-primary-20;
+    border-bottom:  1px solid $color-primary-40;
+
+    &__nav {
+    padding: 28px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 102px;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $font-sfPro;
+        list-style: none;
+        font-size: $font-size-small;
+        gap: 36px;
+        text-transform: uppercase;
+        color: $color-primary-100;
+
+        @include respond(tablet) {
+            display: none;   
+        }
+    }
+
+    &__cta {
+       display: flex;
+       justify-content: center;
+       align-items: center; 
+       font-family: $font-sfPro;
+       font-size: $font-size-small;
+       color: $color-primary-100;
+       text-transform: uppercase;
+       gap: 36px;
+
+       p {
+            @include respond(tablet) {
+                display: none;
+            }
+       }
+
+       button {
+        @extend %button;
+        color: $color-primary-100;
+        width: 125px;
+        height: 46px;
+        background-color: transparent;
+        border: 1px solid $color-primary-80;
+       }
+    }
+}

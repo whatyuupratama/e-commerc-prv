@@ -1,0 +1,107 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    background-color: $color-primary-10;
+
+    &__info {
+        @include respond(tablet) {
+            flex-direction: column;
+            padding: 76px 40px;
+            gap: 64px;
+        }
+
+        padding: 76px 80px;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        gap: 86px;
+
+        &--item {
+            @include respond(tablet) {
+                border-left: none;
+                padding-top: 64px;
+                padding-left: 0;
+                border-top: 1px solid $color-primary-40;
+            }
+
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            padding-left: 86px;
+            width: 100%;
+            border-left: 1px solid $color-primary-40;
+
+            &--list {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 20px;
+
+                &--title {
+                    font-size: $font-size-h4;
+                    font-family: $font-ivyMode;
+                    font-weight: $font-weight-light;
+                    color: $color-primary-100;
+                    text-transform: uppercase;
+                }
+
+                &--menu {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: start;
+                    list-style: none;
+                    padding: 0;
+                    gap: 12px;
+                    color: $color-primary-100;
+                    text-transform: capitalize;
+                    font-family: $font-sfPro;
+                    font-size: $font-size-medium;
+                }
+            }
+
+            &:first-child {
+                @include respond(tablet) {
+                    img {
+                        width: 60%;
+                    }
+                }
+
+                padding: 0;
+                gap: 36px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                width: fit-content;
+
+                p {
+                    width: 399px;
+                    font-size: $font-size-medium;
+                    color: $color-primary-80;
+                    font-family: $font-sfPro;
+                }
+                border: none;
+            }
+        }
+    }
+
+    &__text {
+        text-align: center;
+        width: 100%;
+        padding: 24px 0;
+        font-size: $font-size-medium;
+        font-family: $font-sfPro;
+        font-weight: $font-weight-light;
+        color: $color-primary-100;
+        background-color: $color-primary-10;
+        border-top: 1px solid $color-primary-40;
+
+        span {
+            //font-weight: $font-weight-semibold;
+        }
+    }
+}

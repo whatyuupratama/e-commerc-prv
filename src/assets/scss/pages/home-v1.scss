@@ -1,0 +1,657 @@
+// Initialize first
+@import "../init";
+
+// Import files  
+@import "home";
+
+// Add your style here
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../../assets/media/images/daisies\ 1.png');
+    background-color: $color-primary-20;
+    background-size: 770px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-top: 48px;
+    position: relative;
+
+    @include respond(tablet) {
+        padding: 50px 0;
+    }
+
+    &__text {
+        @include respond(tablet) {
+            width: 100%;
+            padding: 0 40px;
+        }
+
+        padding: 0 80px;
+        width: 75%;
+
+        &--title {
+            color: $color-primary-100;
+            margin-bottom: 12px;
+            font-size: $font-size-h1;
+            text-transform: uppercase;
+            font-family: $font-ivyMode;
+            font-weight: $font-weight-light;
+        }
+
+        &--paragraph {
+            width: 513px;
+            font-family: $font-sfPro;
+            color: $color-primary-80;
+            //font-weight: $font-weight-ultralight;
+            font-size: $font-size-medium;
+        }
+
+        &--cta {
+            @extend %button;
+            width: 268px;
+            height: 57px;
+            background-color: $color-primary-80;
+            color: $white;
+            margin-top: 24px;
+            border: none;
+        }
+    }
+
+    &__image {
+        @include respond(tablet) {
+            top: 45%;
+            left: 55%;
+        }
+
+        background-color: $white;
+        position: absolute;
+        width: 264px;
+        padding: 12px 12px 16px 12px;
+        top: 15%;
+        right: 5%;
+        transform: rotate(1deg);
+
+        &--img {
+            transform: rotate(-1deg);
+            width: 100%;
+            height: 280px;
+        }
+
+        p {
+            font-size: $font-size-medium;
+        }
+
+        span {
+            font-size: $font-size-small;
+        }
+
+        &--icon {
+            width: 96px;
+            height: 96px;
+            //padding: 10px;
+            //background-color: $color-primary-80;
+            border-radius: 50%;
+            position: absolute;
+            top: -2.5rem;
+            right: -2rem;
+            //transform: rotate(-15deg);
+        }
+    }
+}
+
+.quality {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-primary-10;
+    width: 100%;
+    height: 144px;
+    padding: 40px 80px;
+    box-shadow: 0 -100px 10px rgba($color: #000000, $alpha: .2);
+
+    @include respond(tablet) {
+        overflow-x: scroll;
+        scrollbar-width: none;
+        justify-content: start;
+        gap: 36px;
+    }
+
+    &__item {
+        @include respond(tablet) {
+            text-wrap: nowrap;
+            width: 100%;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        img {
+            width: 64px;
+            height: 64px;
+            padding: 10px;
+            background-color: $color-primary-80;
+            border-radius: 50%;
+        }
+
+        &--text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+
+            h6 {
+                font-size: $font-size-h6;
+                font-weight: $font-weight-light;
+                font-family: $font-ivyMode;
+                color: $color-primary-80;
+                text-transform: capitalize;
+            }
+
+            p {
+                font-size: $font-size-medium;
+                font-family: $font-sfPro;
+                color: $color-primary-80;
+            }
+        }
+    }
+}
+
+.introduction {
+    background-color: $color-primary-0;
+    padding: 76px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+
+    @include respond(tablet) {
+        flex-direction: column;
+        padding: 76px 40px;
+        gap: 48px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 732px;
+        //height: 382px;
+        gap: 36px;
+
+        @include respond(tablet) {
+            width: 100%;
+        }
+
+        &--title {
+            font-size: $font-size-h2;
+            font-weight: $font-weight-light;
+            font-family: $font-ivyMode;
+            text-transform: uppercase;
+            color: $color-primary-100;
+        }
+
+        &--paragraph {
+            font-family: $font-sfPro;
+            color: $color-primary-80;
+            //font-weight: $font-weight-light;
+            font-size: $font-size-medium;
+        }
+
+        &--cta {
+            width: 209px;
+            height: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background-color: $color-primary-80;
+            color: $color-primary-0;
+            font-size: $font-size-xsmall;
+            font-weight: $font-weight-regular;
+            font-family: $font-sfPro;
+            border: none;
+            text-transform: uppercase;
+            border-radius: $rounded-full;
+        }
+    }
+
+    &__gallery {
+        display: flex;
+        justify-content: center;
+        width: 485.3px;
+        gap: 10px;
+
+        &--left,
+        &--right {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            img {
+                width: 100%;
+                border: 6px solid $white;
+            }
+        }
+
+        &--left {
+            img:nth-child(2) {
+                width: 164px;
+                height: 164px;
+            }
+
+            align-items: end;
+        }
+
+        &--right {
+            img:nth-child(1) {
+                width: 154px;
+                height: 154px;
+            }
+
+            align-items: start;
+        }
+    }
+}
+
+.collection {
+    width: 100%;
+    padding: 76px 80px;
+    background-color: $color-primary-20;
+
+    @include respond(tablet) {
+        padding: 76px 40px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: fit-content;
+        gap: 36px;
+
+        @include respond(tablet) {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &--item:nth-child(even) {
+            transform: rotate(1deg);
+        }
+
+        &--item:nth-child(odd) {
+            transform: rotate(-1deg);
+        }
+
+        &--item {
+            width: 293px;
+            background-color: $white;
+            padding: 16px 16px 20px 16px;
+
+            &--image {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            &--text {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                i {
+                    border: 1px solid $color-primary-80;
+                    width: 34px;
+                    height: 34px;
+                    text-align: center;
+                    line-height: 34px;
+                    color: $color-primary-80;
+                    border-radius: 50%;
+
+                }
+
+                p {
+                    font-size: $font-size-large;
+                    text-transform: capitalize;
+                    font-family: $font-sfPro;
+                    font-weight: $font-weight-regular;
+                    margin-bottom: 4px;
+                }
+
+                span {
+                    font-family: $font-sfPro;
+                    //font-weight: $font-weight-ultralight;
+                    font-size: $font-size-medium;
+                }
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 18px;
+
+        &--title {
+            color: $color-primary-100;
+            font-size: $font-size-h2;
+            text-transform: uppercase;
+            font-family: $font-ivyMode;
+            font-weight: $font-weight-light;
+        }
+
+        &--paragraph {
+            width: 100%;
+            padding-top: 36px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid $color-primary-40;
+
+            p {
+                font-size: $font-size-medium;
+                //font-weight: $font-weight-ultralight;
+                font-family: $font-sfPro;
+                color: $color-primary-80;
+                width: 950px;
+            }
+
+            &--icons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                i {
+                    width: 52px;
+                    height: 52px;
+                    border-radius: 50%;
+                    color: $color-primary-80;
+                    line-height: 52px;
+                    text-align: center;
+                    border: 1px solid $color-primary-80;
+                }
+            }
+        }
+    }
+
+    &__text {
+        @extend %heading-title;
+    }
+}
+
+.testimonials {
+    width: 100%;
+    padding: 76px 80px;
+    background-color: $color-primary-0;
+    overflow: hidden;
+
+    @include respond(tablet) {
+        padding: 76px 40px;
+    }
+
+    &__text {
+        @extend %heading-title;
+
+        @include respond(tablet) {
+            width: 688px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        gap: 36px;
+
+        &--cust:nth-child(even) {
+            transform: rotate(-1deg);
+        }
+
+        &--cust:nth-child(odd) {
+            transform: rotate(1deg);
+        }
+
+        &--cust {
+            width: 402.67px;
+            background-color: $white;
+            padding: 28px;
+
+            i {
+                font-size: 35px;
+                color: $color-primary-10;
+                display: block;
+                margin-bottom: 24px;
+            }
+
+            &--text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 8px;
+                margin-bottom: 20px;
+
+                p {
+                    font-size: $font-size-xlarge;
+                    color: $color-primary-100;
+                    font-weight: $font-weight-regular;
+                }
+
+                span {
+                    font-size: $font-size-xsmall;
+                    color: $color-primary-80;
+                    //font-weight: $font-weight-light;
+                }
+            }
+
+            &--user {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 16px;
+
+                &--text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    font-family: $font-sfPro;
+
+                    p {
+                        font-size: $font-size-large;
+                        color: $color-primary-100;
+                        font-weight: $font-weight-regular;
+                    }
+
+                    span {
+                        font-size: $font-size-xsmall;
+                        color: $color-primary-80;
+                        //font-weight: $font-weight-light;
+                    }
+                }
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+}
+
+.companies {
+    @include respond(tablet) {
+        display: none;
+    }
+
+    padding: 20px 80px 96px 80px;
+    width: 100%;
+    background-color: $color-primary-0;
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+.stories {
+    width: 100%;
+    padding: 76px 80px;
+    background-color: $color-primary-10;
+
+    @include respond(tablet) {
+        padding: 76px 40px;
+        width: 100%;
+    }
+
+    &__text {
+        @extend %heading-title;
+
+        &--title {
+            width: 682px;
+        }
+    }
+
+    &__list {
+        display: inline-flex;
+        justify-content: start;
+        align-items: center;
+        width: fit-content;
+        gap: 36px;
+
+        @include respond(tablet) {
+            flex-direction: column;
+        }
+
+        &--item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            width: 455px;
+            border-right: 1px solid $color-primary-40;
+            padding-right: 36px;
+
+            @include respond(tablet) {
+                width: 688px;
+                border-right: none;
+                border-bottom: 1px solid $color-primary-40;
+                padding-bottom: 36px;
+            }
+
+            &--categories {
+                text-transform: uppercase;
+                font-size: $font-size-xsmall;
+                color: $color-primary-80;
+                font-family: $font-sfPro;
+            }
+
+            &--title {
+                text-transform: uppercase;
+                margin-bottom: 24px;
+                font-family: $font-ivyMode;
+                color: $color-primary-100;
+                font-weight: $font-weight-regular;
+            }
+
+            &--image {
+                @include respond(tablet) {
+                    width: 608px;
+                    height: 403px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                width: 100%;
+            }
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}
+
+.git {
+    @include respond(tablet) {
+        width: 100%;
+        padding: 76px 40px;
+    }
+
+    padding: 76px 80px;
+    background: linear-gradient(rgba(94, 102, 83, 0.97), rgba(94, 102, 83, 0.97)),
+    url('../../../assets/media/images/Testimonial (1).png') no-repeat center/contain;
+    background-size: 100% auto;
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: start;
+        gap: 36px;
+
+        &--title {
+            @include respond(tablet) {
+                width: 100%;
+            }
+
+            font-size: $font-size-h3;
+            font-weight: $font-weight-light;
+            width: 924px;
+            color: $color-primary-0;
+            font-family: $font-ivyMode;
+            text-transform: uppercase;
+        }
+
+        &--paragraph {
+            @include respond(tablet) {
+                flex-direction: column;
+                align-items: start;
+                gap: 24px;
+            }
+
+            padding-top: 36px;
+            border-top: 1px solid $color-primary-10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            p {
+                font-family: $font-sfPro;
+                color: $color-primary-0;
+                font-size: $font-size-large;
+                width: 511px;
+            }
+
+            &--cta {
+                width: 360px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-transform: uppercase;
+                background-color: transparent;
+                border: 1px solid $color-primary-0;
+                border-radius: $rounded-full;
+                height: 57px;
+                padding: 16px 24px;
+                font-size: $font-size-medium;
+                font-family: $font-sfPro;
+                color: $color-primary-0;
+                //font-weight: $font-weight-light;
+            }
+        }
+    }
+}

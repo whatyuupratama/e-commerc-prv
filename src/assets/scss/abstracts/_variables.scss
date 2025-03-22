@@ -1,0 +1,75 @@
+// Fonts
+$font-primary: "FT Sterling",Verdana,sans-serif;
+$font-secondary: "Mona Sans",Verdana,sans-serif;
+$font-oss: "Open Sauce Sans";
+$font-ivyMode: "Ivy Mode";
+$font-sfPro: "SF Pro";
+
+//Font Sizes
+$font-size-h1: 76px;
+$font-size-h2: 64px;
+$font-size-h3: 48px;
+$font-size-h4: 32px;
+$font-size-h5: 28px;
+$font-size-h6: 24px;
+$font-size-small: 14px;
+$font-size-xsmall: 16px;
+$font-size-medium: 18px;
+$font-size-large: 20px;
+$font-size-xlarge: 24px;
+
+// Font Weights
+$font-weight-ultralight: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+
+// Line Heights
+$line-height-h1: 1.2em;
+$line-height-h2: 1.4em;
+$line-height-h3: 1.4em;
+$line-height-h4: 1.4em;
+$line-height-h5: 1.4em;
+$line-height-h6: 33.6px;
+$line-height-small: 19.6px;
+$line-height-medium: 1.4em;
+$line-height-large: 25.2px;
+
+// Color system
+$color-primary-0: #F3F6F0;
+$color-primary-10: #E2E7DB;
+$color-primary-20: #D9DED2;
+$color-primary-40: #ADB4A4;
+$color-primary-80: #5E6653;
+$color-primary-100: #465039;
+
+$color-secondary: #5E6653F7;
+
+$rounded-full: calc(infinity * 1px);
+
+// Brand Colors
+$green--100: #cdeadf;
+$green--200: #b4dfcf;
+$green--300: #9cd5bf;
+$green--400: #83caaf;
+$green--500: #6abf9f;
+$green--600: #51b58f; 
+$green--700: #39aa7f;
+$green--800: #1f9f6f;
+$green--900: #07955f;
+
+// Neutral Colors
+$black: #0d0e0c;
+$grey: #504c4c;
+$light-grey-30: #e2e2e2;
+$light-grey-20: #f7f7f7;
+$light-grey-10: #fcfcfc;
+$white: white;
+
+// Breakpoints
+$screen-xxs: 478px; // Mobile Portrait
+$screen-xs: 767px; // Mobile Landscape
+$screen-s: 991px; // Tablet
+$screen-l: 1280px; // Large Desktop
+$screen-xl: 1440px; // XLarge Desktop
+$screen-xxl: 1920px; // XXLarge Desktop

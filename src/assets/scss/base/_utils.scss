@@ -1,0 +1,135 @@
+// START:: Paddings
+.padding-global {
+  padding-inline: toRem(40);
+  @media only screen and (max-width: $screen-xs) {
+    padding-inline: toRem(20);
+  }
+}
+
+.padding-section-small {
+  padding-top: toRem(12);
+  padding-bottom: toRem(12);
+}
+
+.padding-section-xsmall {
+  padding-top: toRem(16);
+  padding-bottom: toRem(16);
+}
+
+.padding-section-medium {
+  padding-top: toRem(28);
+  padding-bottom: toRem(28);
+}
+
+.padding-section-large {
+  padding-top: toRem(40);
+  padding-bottom: toRem(40);
+}
+
+.padding-section-xlarge {
+  padding-top: toRem(76);
+  padding-bottom: toRem(76);
+}
+// END:: Paddings
+
+// START:: Containers
+.container-small {
+  width: 100%;
+  max-width: 48rem;
+}
+
+.container-medium {
+  width: 100%;
+  max-width: 64rem;
+}
+
+.container-large {
+  width: 100%;
+  max-width: 80rem;
+}
+// END:: Containers
+
+// START:: Typography
+.text-weight-xbold {
+  font-weight: 800;
+}
+
+.text-weight-bold {
+  font-weight: 700;
+}
+
+.text-weight-semibold {
+  font-weight: 600;
+}
+
+.text-weight-medium {
+  font-weight: 500;
+}
+
+.text-weight-normal {
+  font-weight: 400;
+}
+.text-weight-light {
+  font-weight: 300;
+}
+
+.text-style-italic {
+  font-style: italic;
+}
+
+.text-style-strikethrough {
+  text-decoration: line-through;
+}
+
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: right;
+}
+// END:: Typography
+
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+
+@media only screen and (max-width: $screen-s) {
+  .hide,
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: $screen-xs) {
+  .hide-mobile-landscape {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: $screen-xxs) {
+  .hide-mobile {
+    display: none !important;
+  }
+}

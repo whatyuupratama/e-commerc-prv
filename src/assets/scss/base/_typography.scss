@@ -1,0 +1,119 @@
+// Body font size usually the same as .text-style-regular
+body {
+  @extend %body;
+  font-size: toRem(18);
+  line-height: 1.4em;
+  letter-spacing: 0em;
+}
+
+// START:: Headings
+h1,
+.heading-style-h1 {
+  @extend %heading;
+  font-size: toRem(76);
+  line-height: 1.2em;
+  letter-spacing: 0.01em;
+  @media only screen and (max-width: $screen-xs) {
+    font-size: toRem(60);
+  }
+}
+
+h2,
+.heading-style-h2 {
+  @extend %heading;
+  font-size: toRem(64);
+  line-height: 1.4em;
+  letter-spacing: 0em;
+  @media only screen and (max-width: $screen-xs) {
+    font-size: toRem(52);
+  }
+}
+
+h3,
+.heading-style-h3 {
+  @extend %heading;
+  font-size: toRem(48);
+  line-height: 1.4em;
+  letter-spacing: 0.04em;
+  @media only screen and (max-width: $screen-xs) {
+    font-size: toRem(40);
+  }
+}
+
+h4,
+.heading-style-h4 {
+  @extend %heading;
+  font-size: toRem(32);
+  line-height: 1.4em;
+  letter-spacing: 0.04em;
+  @media only screen and (max-width: $screen-xs) {
+    font-size: toRem(24);
+  }
+}
+
+h5,
+.heading-style-h5 {
+  @extend %heading;
+  font-size: toRem(28);
+  line-height: 1.4em;
+  letter-spacing: 0em;
+  @media only screen and (max-width: $screen-xs) {
+    font-size: toRem(22);
+  }
+}
+
+h6,
+.heading-style-h6 {
+  @extend %heading;
+  font-size: toRem(24);
+  line-height: 1.4em;
+  letter-spacing: 0em;
+  @media only screen and (max-width: $screen-xs) {
+    font-size: toRem(20);
+  }
+}
+// END:: Headings
+
+// START:: Body Texts
+.text-size-xlarge {
+  @extend %body;
+  font-size: toRem(24);
+  line-height: 1.4em;
+  letter-spacing: 0em;
+}
+
+.text-size-large {
+  @extend %body;
+  font-size: toRem(20);
+  line-height: 1.4em;
+  letter-spacing: 0em;
+}
+
+.text-size-medium {
+  @extend %body;
+  font-size: toRem(18);
+  line-height: 1.4em;
+  letter-spacing: 0em;
+}
+
+.text-size-regular {
+  @extend %body;
+  font-size: toRem(16);
+  line-height: 1.4em;
+  letter-spacing: 0em;
+}
+
+.text-size-small {
+  @extend %body;
+  font-size: toRem(16);
+  line-height: 1.4em;
+  letter-spacing: -0.03em;
+}
+
+.text-size-tiny {
+  @extend %body;
+  font-size: toRem(14);
+  line-height: 1.4em;
+  letter-spacing: 0em;
+}
+// END:: Body Texts
